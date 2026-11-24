@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG ➔ LDN | Trans-Eurasia Overland Expedition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Montserrat', sans-serif; }
+        .page-section { display: none; animation: fadeIn 0.35s ease-out; }
+        .page-section.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-200 antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-stone-950/95 backdrop-blur-md border-b border-stone-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+            <button onclick="switchPage('home')" class="flex items-center gap-2 text-left group">
+                <span class="bg-amber-500 text-stone-950 font-black px-2.5 py-1 rounded text-sm tracking-tighter group-hover:bg-amber-400 transition">OVERLAND</span>
+                <span class="text-white font-display font-black tracking-wide text-lg">SG <span class="text-amber-500">➔</span> LDN</span>
+            </button>
+
+            <!-- Navigation Menu (Multi-Page Switcher) -->
+            <div class="flex flex-wrap gap-1 sm:gap-2 bg-stone-900 p-1.5 rounded-xl border border-stone-800">
+                <button onclick="switchPage('home')" id="nav-home" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition bg-amber-500 text-stone-950">
+                    Utama
+                </button>
+                <button onclick="switchPage('routes')" id="nav-routes" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
+                    Fasa Laluan
+                </button>
+                <button onclick="switchPage('gallery')" id="nav-gallery" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
+                    Galeri Foto
+                </button>
+                <button onclick="switchPage('checklist')" id="nav-checklist" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
+                    Checklist & Logistik
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow">
+
+        <!-- ==========================================
+             PAGE 1: UTAMA (HOME)
+        =========================================== -->
+        <section id="page-home" class="page-section active">
+            <!-- Hero Banner with Full Background Image -->
+            <div class="relative min-h-[82vh] flex items-center justify-center overflow-hidden border-b border-stone-800">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1800&q=80" 
+                     alt="Overland Road Trip" 
+                     class="absolute inset-0 w-full h-full object-cover object-center scale-105 filter brightness-50">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-stone-950/30"></div>
+
+                <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
+                    <span class="inline-block py-1.5 px-4 rounded-full bg-amber-500/20 text-amber-400 text-xs font-extrabold tracking-widest uppercase mb-6 border border-amber-500/40 backdrop-blur-sm">
+                        Ekspedisi Jalan Darat Merentas 2 Benua
+                    </span>
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-white leading-tight mb-6 drop-shadow-lg">
+                        SINGAPORE KE <span class="text-amber-500">LONDON</span>
+                    </h1>
+                    <p class="text-stone-200 text-base sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow">
+                        Dari garisan khatulistiwa Asia Tenggara, menembusi banjaran Pamir & Laluan Sutera purba, merentas Anatolia hingga ke kota London tanpa menaiki kapal terbang.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-4 mb-14">
+                        <button onclick="switchPage('routes')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-black px-8 py-4 rounded-xl text-sm uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
+                            Teroka 4 Fasa Laluan ➔
+                        </button>
+                        <button onclick="switchPage('gallery')" class="bg-stone-900/90 hover:bg-stone-800 text-white font-bold px-8 py-4 rounded-xl text-sm uppercase tracking-wider border border-stone-700 backdrop-blur-sm transition">
+                            Lihat Galeri Foto
+                        </button>
+                    </div>
+
+                    <!-- Quick Stats Bar -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-stone-950/85 backdrop-blur-md p-6 rounded-2xl border border-stone-800">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-black text-white">22,400</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-wider mt-1">Anggaran KM</p>
+                        </div>
+                        <div class="border-l border-stone-800">
+                            <p class="text-2xl sm:text-3xl font-black text-amber-500">18+</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-wider mt-1">Lintas Sempadan</p>
+                        </div>
+                        <div class="md:border-l border-stone-800">
+                            <p class="text-2xl sm:text-3xl font-black text-white">4,655m</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-wider mt-1">Puncak Tertinggi (Ak-Baital)</p>
+                        </div>
+                        <div class="border-l border-stone-800">
+                            <p class="text-2xl sm:text-3xl font-black text-amber-500">90–120</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-wider mt-1">Hari Perjalanan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlight Cards on Home -->
+            <div class="max-w-6xl mx-auto px-6 py-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+                    <div>
+                        <h2 class="text-3xl font-black text-white">KENAPA LALUAN INI LEGENDA?</h2>
+                        <p class="text-stone-400 mt-2">Tiga segmen paling ikonik yang menjadi impian setiap *overlander*.</p>
+                    </div>
+                    <button onclick="switchPage('checklist')" class="text-amber-400 hover:text-amber-300 text-sm font-bold">
+                        Semak Persediaan Dokumen ➔
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-stone-900 rounded-2xl overflow-hidden border border-stone-800 group">
+                        <div class="h-52 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80" alt="Indochina" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-amber-500 uppercase">Segmen Tropika</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Lebuhraya Pan-Asia</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed">Laluan berbukit dari utara Thailand ke sempadan Laos di Boten sebelum menembusi wilayah pergunungan Yunnan, China.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-stone-900 rounded-2xl overflow-hidden border border-stone-800 group">
+                        <div class="h-52 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=80" alt="Pamir Highway" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-amber-500 uppercase">Segmen Altitud Tinggi</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Lebuhraya Pamir (M41)</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed">Salah satu jalan raya berturap tertinggi di dunia merentas sempadan China, Kyrgyzstan, dan Tajikistan berlatarkan glasier.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-stone-900 rounded-2xl overflow-hidden border border-stone-800 group">
+                        <div class="h-52 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="London" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-amber-500 uppercase">Garisan Penamat</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Terowong Selat Inggeris</h3>
+</html>
