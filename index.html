@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SG ➔ LDN | Trans-Eurasia Overland Expedition</title>
+    <title>SG - LDN | Trans-Eurasia Overland Expedition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .font-display { font-family: 'Montserrat', sans-serif; }
-        .page-section { display: none; animation: fadeIn 0.35s ease-out; }
+        .page-section { display: none; animation: fadeIn 0.3s ease-out; }
         .page-section.active { display: block; }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
+            from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -22,37 +22,31 @@
     <!-- Top Navigation Bar -->
     <nav class="sticky top-0 z-40 bg-stone-950/95 backdrop-blur-md border-b border-stone-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap justify-between items-center gap-4">
-            <button onclick="switchPage('home')" class="flex items-center gap-2 text-left group">
+            <button type="button" onclick="switchPage('home')" class="flex items-center gap-2 text-left group cursor-pointer">
                 <span class="bg-amber-500 text-stone-950 font-black px-2.5 py-1 rounded text-sm tracking-tighter group-hover:bg-amber-400 transition">OVERLAND</span>
                 <span class="text-white font-display font-black tracking-wide text-lg">SG <span class="text-amber-500">➔</span> LDN</span>
             </button>
 
-            <!-- Navigation Menu (Multi-Page Switcher) -->
             <div class="flex flex-wrap gap-1 sm:gap-2 bg-stone-900 p-1.5 rounded-xl border border-stone-800">
-                <button onclick="switchPage('home')" id="nav-home" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition bg-amber-500 text-stone-950">
+                <button type="button" onclick="switchPage('home')" id="nav-home" class="nav-btn cursor-pointer px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition bg-amber-500 text-stone-950">
                     Utama
                 </button>
-                <button onclick="switchPage('routes')" id="nav-routes" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
+                <button type="button" onclick="switchPage('routes')" id="nav-routes" class="nav-btn cursor-pointer px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
                     Fasa Laluan
                 </button>
-                <button onclick="switchPage('gallery')" id="nav-gallery" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
+                <button type="button" onclick="switchPage('gallery')" id="nav-gallery" class="nav-btn cursor-pointer px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
                     Galeri Foto
                 </button>
-                <button onclick="switchPage('checklist')" id="nav-checklist" class="nav-btn px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
+                <button type="button" onclick="switchPage('checklist')" id="nav-checklist" class="nav-btn cursor-pointer px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition text-stone-400 hover:text-white">
                     Checklist & Logistik
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN CONTENT CONTAINER -->
     <main class="flex-grow">
-
-        <!-- ==========================================
-             PAGE 1: UTAMA (HOME)
-        =========================================== -->
+        <!-- PAGE 1: UTAMA -->
         <section id="page-home" class="page-section active">
-            <!-- Hero Banner with Full Background Image -->
             <div class="relative min-h-[82vh] flex items-center justify-center overflow-hidden border-b border-stone-800">
                 <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1800&q=80" 
                      alt="Overland Road Trip" 
@@ -71,15 +65,14 @@
                     </p>
 
                     <div class="flex flex-wrap justify-center gap-4 mb-14">
-                        <button onclick="switchPage('routes')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-black px-8 py-4 rounded-xl text-sm uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
+                        <button type="button" onclick="switchPage('routes')" class="cursor-pointer bg-amber-500 hover:bg-amber-400 text-stone-950 font-black px-8 py-4 rounded-xl text-sm uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
                             Teroka 4 Fasa Laluan ➔
                         </button>
-                        <button onclick="switchPage('gallery')" class="bg-stone-900/90 hover:bg-stone-800 text-white font-bold px-8 py-4 rounded-xl text-sm uppercase tracking-wider border border-stone-700 backdrop-blur-sm transition">
+                        <button type="button" onclick="switchPage('gallery')" class="cursor-pointer bg-stone-900/90 hover:bg-stone-800 text-white font-bold px-8 py-4 rounded-xl text-sm uppercase tracking-wider border border-stone-700 backdrop-blur-sm transition">
                             Lihat Galeri Foto
                         </button>
                     </div>
 
-                    <!-- Quick Stats Bar -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-stone-950/85 backdrop-blur-md p-6 rounded-2xl border border-stone-800">
                         <div>
                             <p class="text-2xl sm:text-3xl font-black text-white">22,400</p>
@@ -101,14 +94,13 @@
                 </div>
             </div>
 
-            <!-- Highlight Cards on Home -->
             <div class="max-w-6xl mx-auto px-6 py-20">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
                     <div>
                         <h2 class="text-3xl font-black text-white">KENAPA LALUAN INI LEGENDA?</h2>
-                        <p class="text-stone-400 mt-2">Tiga segmen paling ikonik yang menjadi impian setiap *overlander*.</p>
+                        <p class="text-stone-400 mt-2">Tiga segmen paling ikonik yang menjadi impian setiap overlander.</p>
                     </div>
-                    <button onclick="switchPage('checklist')" class="text-amber-400 hover:text-amber-300 text-sm font-bold">
+                    <button type="button" onclick="switchPage('checklist')" class="cursor-pointer text-amber-400 hover:text-amber-300 text-sm font-bold">
                         Semak Persediaan Dokumen ➔
                     </button>
                 </div>
@@ -143,4 +135,387 @@
                         <div class="p-6">
                             <span class="text-xs font-bold text-amber-500 uppercase">Garisan Penamat</span>
                             <h3 class="text-xl font-bold text-white mt-1 mb-2">Terowong Selat Inggeris</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed">Menyeberangi Selat Inggeris dari Calais, Perancis ke Folkestone menggunakan kereta api Eurotunnel Le Shuttle terus ke London.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: FASA LALUAN -->
+        <section id="page-routes" class="page-section py-14 px-6 max-w-6xl mx-auto">
+            <div class="mb-12 border-b border-stone-800 pb-8">
+                <span class="text-amber-500 text-xs font-black tracking-widest uppercase">Pecahan Peringkat Kembara</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">4 FASA UTAMA MERENTAS EURASIA</h2>
+                <p class="text-stone-400 mt-2 max-w-2xl">Klik pada butang <strong class="text-white">"Buka Detail Sempadan"</strong> di setiap fasa untuk melihat maklumat pintu masuk negara dan cabaran jalan.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8" id="routes-container"></div>
+        </section>
+
+        <!-- PAGE 3: GALERI FOTO -->
+        <section id="page-gallery" class="page-section py-14 px-6 max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6 border-b border-stone-800 pb-8">
+                <div>
+                    <span class="text-amber-500 text-xs font-black tracking-widest uppercase">Arkib Visual</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">GALERI LENSA OVERLAND</h2>
+                    <p class="text-stone-400 mt-2">Klik mana-mana gambar untuk paparan skrin penuh.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button type="button" onclick="filterGallery('all', this)" class="filter-btn cursor-pointer bg-amber-500 text-stone-950 px-4 py-2 rounded-lg text-xs font-bold transition">Semua</button>
+                    <button type="button" onclick="filterGallery('asia', this)" class="filter-btn cursor-pointer bg-stone-900 text-stone-300 hover:text-white px-4 py-2 rounded-lg text-xs font-bold border border-stone-800 transition">Asia & Silk Road</button>
+                    <button type="button" onclick="filterGallery('europe', this)" class="filter-btn cursor-pointer bg-stone-900 text-stone-300 hover:text-white px-4 py-2 rounded-lg text-xs font-bold border border-stone-800 transition">Turki & Eropah</button>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid"></div>
+        </section>
+
+        <!-- PAGE 4: CHECKLIST & LOGISTIK -->
+        <section id="page-checklist" class="page-section py-14 px-6 max-w-5xl mx-auto">
+            <div class="mb-10 border-b border-stone-800 pb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                    <span class="text-amber-500 text-xs font-black tracking-widest uppercase">Perancangan & Kertas Kerja</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">CHECKLIST WAJIB OVERLANDER</h2>
+                    <p class="text-stone-400 mt-2">Tandakan kotak di bawah untuk rekod persediaan kau. Status simpanan adalah automatik.</p>
+                </div>
+                <button type="button" onclick="resetChecklist()" class="cursor-pointer text-xs text-stone-400 hover:text-red-400 underline self-start sm:self-end">
+                    Reset Semua Tanda
+                </button>
+            </div>
+
+            <div class="bg-stone-900 p-6 rounded-2xl border border-stone-800 mb-10">
+                <div class="flex justify-between text-sm font-bold mb-2">
+                    <span class="text-white">Tahap Kesediaan Ekspedisi</span>
+                    <span id="progress-text" class="text-amber-500">0% Siap</span>
+                </div>
+                <div class="w-full bg-stone-800 rounded-full h-3 overflow-hidden">
+                    <div id="progress-bar" class="bg-amber-500 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8" id="checklist-container"></div>
+        </section>
+    </main>
+
+    <!-- MODAL DETAIL FASA -->
+    <div id="phase-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-stone-900 border border-stone-700 rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl my-8">
+            <div class="relative h-60">
+                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/30 to-transparent"></div>
+                <button type="button" onclick="closePhaseModal()" class="cursor-pointer absolute top-4 right-4 bg-stone-950/80 hover:bg-amber-500 hover:text-stone-950 text-white w-10 h-10 rounded-full font-bold transition flex items-center justify-center">✕</button>
+                <div class="absolute bottom-4 left-6">
+                    <span id="modal-tag" class="bg-amber-500 text-stone-950 text-xs font-black px-2.5 py-1 rounded uppercase"></span>
+                    <h3 id="modal-title" class="text-2xl font-black text-white mt-2"></h3>
+                </div>
+            </div>
+            <div class="p-6 space-y-5">
+                <div class="flex flex-wrap gap-3 text-xs font-bold">
+                    <span id="modal-dist" class="bg-stone-800 text-amber-400 px-3 py-1.5 rounded-lg"></span>
+                    <span id="modal-days" class="bg-stone-800 text-stone-300 px-3 py-1.5 rounded-lg"></span>
+                </div>
+                <p id="modal-desc" class="text-stone-300 text-sm leading-relaxed"></p>
+                <div class="bg-stone-950 p-4 rounded-xl border border-stone-800">
+                    <h4 class="text-xs font-black text-amber-500 uppercase tracking-wider mb-2">🛂 Pintu Sempadan & Nota Penting</h4>
+                    <p id="modal-border" class="text-stone-400 text-sm leading-relaxed"></p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-black text-stone-400 uppercase tracking-wider mb-2">Laluan Negara</h4>
+                    <p id="modal-countries" class="text-sm font-bold text-white"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL LIGHTBOX -->
+    <div id="lightbox-modal" onclick="closeLightbox()" class="fixed inset-0 z-50 hidden bg-black/95 flex flex-col items-center justify-center p-4 cursor-pointer">
+        <button type="button" class="absolute top-6 right-6 text-white bg-stone-800 hover:bg-amber-500 hover:text-stone-950 w-10 h-10 rounded-full font-bold">✕</button>
+        <img id="lightbox-img" src="" alt="" class="max-h-[78vh] max-w-full rounded-xl shadow-2xl border border-stone-800 object-contain">
+        <div class="text-center mt-4 max-w-xl">
+            <h4 id="lightbox-title" class="text-white font-bold text-lg"></h4>
+            <p id="lightbox-caption" class="text-stone-400 text-sm mt-1"></p>
+        </div>
+    </div>
+
+    <footer class="bg-stone-950 border-t border-stone-900 py-8 px-6 text-center text-xs text-stone-500">
+        <p>Dibina oleh <strong class="text-stone-300">Payet</strong> • Ekspedisi Overland Singapore – London</p>
+    </footer>
+
+    <script>
+        const phasesData = [
+            {
+                tag: "FASA 01",
+                title: "Asia Tenggara ke Tanah Besar China",
+                dist: "~4,500 KM",
+                days: "Anggaran 14–18 Hari",
+                img: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=900&q=80",
+                summary: "Bermula dari Singapura, naik ke Semenanjung Malaysia, merentas Thailand dan Laos sebelum memasuki wilayah Yunnan, China.",
+                desc: "Fasa pemanas badan dengan cuaca tropika dan jalan raya berturap baik. Cabaran utama bermula apabila mendaki laluan berliku di utara Laos (Luang Namtha) menuju ke sempadan China di Mohan.",
+                border: "Wajib menggunakan khidmat ejen pelancongan berdaftar di China untuk mendapatkan lesen memandu sementara China, nombor plat sementara, dan pemandu pelancong (guide) sepanjang berada di dalam China.",
+                countries: "🇸🇬 Singapura ➔ 🇲🇾 Malaysia ➔ 🇹🇭 Thailand ➔ 🇱🇦 Laos ➔ 🇨🇳 China (Kunming - Kashgar)"
+            },
+            {
+                tag: "FASA 02",
+                title: "Bumbung Dunia & Laluan Sutera",
+                dist: "~5,800 KM",
+                days: "Anggaran 25–30 Hari",
+                img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=80",
+                summary: "Keluar dari Xinjiang melalui Irkeshtam Pass menuju pergunungan Kyrgyzstan, kota purba Samarkand di Uzbekistan, dan padang steppe Kazakhstan.",
+                desc: "Inilah nadi sebenar kembara overland. Pemanduan altitud tinggi melebihi 3,700 meter di sempadan China-Kyrgyzstan menuntut ketahanan enjin dan sistem penyejukan kenderaan sebelum turun ke padang pasir Kyzylkum di Uzbekistan.",
+                border: "Lintasan sempadan Irkeshtam Pass terkenal dengan pemeriksaan kastam yang teliti dan waktu operasi yang terhad. Pastikan bekalan bahan api diisi penuh sebelum merentas padang steppe Kazakhstan yang jarak stesen minyaknya mencecah ratusan kilometer.",
+                countries: "🇨🇳 China (Kashgar) ➔ 🇰🇬 Kyrgyzstan ➔ 🇺🇿 Uzbekistan ➔ 🇰🇿 Kazakhstan"
+            },
+            {
+                tag: "FASA 03",
+                title: "Kaukasus & Tanah Anatolia",
+                dist: "~4,200 KM",
+                days: "Anggaran 18–22 Hari",
+                img: "https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=900&q=80",
+                summary: "Merentas Rusia atau menyeberangi Laut Kaspia ke Azerbaijan, menawan banjaran Kaukasus di Georgia dan membelah Turki hingga ke Istanbul.",
+                desc: "Peralihan budaya dan geografi yang dramatik. Dari jalan pergunungan Kazbegi di Georgia hingga ke dataran tinggi Anatolia di Turki sebelum menyeberangi Jambatan Bosphorus yang memisahkan benua Asia dan Eropah.",
+                border: "Sempadan darat Azerbaijan sering mempunyai peraturan khas; laluan alternatif adalah melalui Astrakhan (Rusia) terus masuk ke Georgia (Upper Lars). Insurans kenderaan Green Card mula diguna pakai apabila memasuki Turki.",
+                countries: "🇷🇺 Rusia / 🇦🇿 Azerbaijan ➔ 🇬🇪 Georgia ➔ 🇹🇷 Turki (Trabzon - Istanbul)"
+            },
+            {
+                tag: "FASA 04",
+                title: "Balkan ke Garisan Penamat London",
+                dist: "~3,500 KM",
+                days: "Anggaran 14–18 Hari",
+                img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80",
+                summary: "Memasuki Kesatuan Eropah melalui Bulgaria, menyusuri negara Balkan dan Eropah Tengah hingga ke Calais, Perancis untuk menyeberang ke UK.",
+                desc: "Pemanduan lebuh raya moden merentas Eropah. Selepas melepasi sempadan Turki-Bulgaria (Kapitan Andreevo), perjalanan merentas negara-negara Schengen menjadi lancar tanpa sekatan imigresen antara negara sehingga tiba di Selat Inggeris.",
+                border: "Perlu mematuhi zon pelepasan asap rendah (LEZ / ULEZ) di bandar-bandar besar Eropah dan London. Tiket Eurotunnel Le Shuttle (35 minit) membawa kenderaan terus dari Calais ke Folkestone, UK.",
+                countries: "🇧🇬 Bulgaria ➔ 🇷🇸 Serbia ➔ 🇭🇺 Hungary ➔ 🇦🇹 Austria ➔ 🇩🇪 Jerman ➔ 🇫🇷 Perancis ➔ 🇬🇧 United Kingdom"
+            }
+        ];
+
+        const galleryData = [
+            {
+                cat: "asia",
+                title: "Lebuhraya Pergunungan Yunnan",
+                caption: "Laluan berliku selepas melepasi sempadan Laos menuju ke Kunming, China.",
+                img: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+                cat: "asia",
+                title: "Tapak Perkhemahan Pergunungan Tian Shan",
+                caption: "Bermalam di bawah langit bersih Asia Tengah di Kyrgyzstan.",
+                img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+                cat: "asia",
+                title: "Selekoh Tajam Banjaran Pamir",
+                caption: "Ujian sebenar sistem brek dan suspensi pada ketinggian lebih 4,000 meter.",
+                img: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+                cat: "europe",
+                title: "Jambatan Bosphorus, Istanbul",
+                caption: "Detik bersejarah memandu keluar dari benua Asia memasuki benua Eropah.",
+                img: "https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+                cat: "europe",
+                title: "Tasik Alpine Eropah Tengah",
+                caption: "Persinggahan santai merentas Austria sebelum memasuki Autobahn Jerman.",
+                img: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+                cat: "europe",
+                title: "Kota London, United Kingdom",
+                caption: "Garisan penamat selepas lebih 22,000 kilometer pemanduan merentas dua benua.",
+                img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80"
+            }
+        ];
+
+        const checklistGroups = [
+            {
+                title: "📄 Dokumen Kenderaan & Pemandu",
+                items: [
+                    "Carnet de Passages en Douane (CPD) - Pasport kereta",
+                    "Geran Asal Kenderaan (VOC) & Terjemahan Bahasa Inggeris",
+                    "International Driving Permit (IDP) sah 1 tahun",
+                    "Insurans Green Card (Turki & Eropah) + Insurans Sempadan"
+                ]
+            },
+            {
+                title: "🛂 Visa & Permit Khas",
+                items: [
+                    "Permit Memandu Sementara & Guide China (Tempah 2 bulan awal)",
+                    "e-Visa Uzbekistan, Tajikistan & Azerbaijan",
+                    "Visa Schengen / UK ETA (mengikut peraturan semasa pasport Malaysia)",
+                    "Salinan fizikal pasport & dokumen (minimum 15 set)"
+                ]
+            },
+            {
+                title: "🔧 Persediaan Mekanikal Kereta",
+                items: [
+                    "Servis penuh minyak enjin, gearbox & bendalir brek",
+                    "Tayar All-Terrain (AT) atau tayar baharu + tayar simpanan penuh",
+                    "Pam angin mudah alih (12V) & kit tampal tayar",
+                    "Alat ganti asas: penapis udara, belting, fius & jumper bateri"
+                ]
+            },
+            {
+                title: "🧭 Navigasi & Keselamatan",
+                items: [
+                    "Muat turun peta offline penuh (OsmAnd / Maps.me)",
+                    "Tong minyak simpanan (Jerry Can 20L) untuk padang steppe",
+                    "Kit pertolongan cemas & ubat altitud tinggi (Diamox)",
+                    "Kad kredit antarabangsa + wang tunai USD baru"
+                ]
+            }
+        ];
+
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById('page-' + pageId);
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-stone-950');
+                btn.classList.add('text-stone-400', 'hover:text-white');
+            });
+            const activeBtn = document.getElementById('nav-' + pageId);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-stone-400', 'hover:text-white');
+                activeBtn.classList.add('bg-amber-500', 'text-stone-950');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderRoutes() {
+            const container = document.getElementById('routes-container');
+            container.innerHTML = phasesData.map((p, index) => `
+                <div class="bg-stone-900 rounded-2xl overflow-hidden border border-stone-800 hover:border-amber-500/50 transition flex flex-col">
+                    <div class="relative h-56">
+                        <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-stone-950/90 text-amber-500 font-black text-xs px-3 py-1 rounded-full border border-amber-500/30">${p.tag}</span>
+                        <span class="absolute top-4 right-4 bg-stone-950/90 text-white font-bold text-xs px-3 py-1 rounded-full">${p.dist}</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">${p.title}</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed mb-4">${p.summary}</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-800 flex items-center justify-between gap-4">
+                            <span class="text-xs text-stone-500 font-semibold">${p.days}</span>
+                            <button type="button" onclick="openPhaseModal(${index})" class="cursor-pointer bg-stone-800 hover:bg-amber-500 hover:text-stone-950 text-amber-400 text-xs font-bold px-4 py-2.5 rounded-lg transition">
+                                Buka Detail Sempadan ➔
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openPhaseModal(index) {
+            const p = phasesData[index];
+            document.getElementById('modal-img').src = p.img;
+            document.getElementById('modal-tag').innerText = p.tag;
+            document.getElementById('modal-title').innerText = p.title;
+            document.getElementById('modal-dist').innerText = "Jarak: " + p.dist;
+            document.getElementById('modal-days').innerText = "Tempoh: " + p.days;
+            document.getElementById('modal-desc').innerText = p.desc;
+            document.getElementById('modal-border').innerText = p.border;
+            document.getElementById('modal-countries').innerText = p.countries;
+            document.getElementById('phase-modal').classList.remove('hidden');
+        }
+
+        function closePhaseModal() {
+            document.getElementById('phase-modal').classList.add('hidden');
+        }
+
+        function renderGallery(filter = 'all') {
+            const grid = document.getElementById('gallery-grid');
+            const filtered = filter === 'all' ? galleryData : galleryData.filter(item => item.cat === filter);
+            grid.innerHTML = filtered.map(item => `
+                <div onclick="openLightbox('${item.img}', '${item.title}', '${item.caption}')" 
+                     class="group relative h-72 rounded-2xl overflow-hidden border border-stone-800 cursor-pointer bg-stone-900">
+                    <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <h4 class="text-white font-bold text-base group-hover:text-amber-400 transition">${item.title}</h4>
+                        <p class="text-stone-300 text-xs mt-1 line-clamp-2">${item.caption}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterGallery(cat, clickedBtn) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-stone-950');
+                btn.classList.add('bg-stone-900', 'text-stone-300', 'border', 'border-stone-800');
+            });
+            if (clickedBtn) {
+                clickedBtn.classList.remove('bg-stone-900', 'text-stone-300', 'border', 'border-stone-800');
+                clickedBtn.classList.add('bg-amber-500', 'text-stone-950');
+            }
+            renderGallery(cat);
+        }
+
+        function openLightbox(img, title, caption) {
+            document.getElementById('lightbox-img').src = img;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        let savedChecks = JSON.parse(localStorage.getItem('payet_overland_checks') || '{}');
+
+        function renderChecklist() {
+            const container = document.getElementById('checklist-container');
+            let itemIndex = 0;
+            container.innerHTML = checklistGroups.map(group => {
+                const itemsHtml = group.items.map(text => {
+                    const id = 'chk_' + itemIndex++;
+                    const isChecked = savedChecks[id] ? 'checked' : '';
+                    return `
+                        <label class="flex items-start gap-3 p-3 rounded-xl bg-stone-950/70 hover:bg-stone-950 border border-stone-800/80 cursor-pointer transition">
+                            <input type="checkbox" id="${id}" ${isChecked} onchange="toggleCheck('${id}')" 
+                                   class="mt-1 w-4 h-4 accent-amber-500 rounded cursor-pointer">
+                            <span class="text-sm ${isChecked ? 'line-through text-stone-500' : 'text-stone-300'}">${text}</span>
+                        </label>
+                    `;
+                }).join('');
+
+                return `
+                    <div class="bg-stone-900 p-6 rounded-2xl border border-stone-800">
+                        <h3 class="font-bold text-amber-400 text-base mb-4">${group.title}</h3>
+                        <div class="space-y-2.5">${itemsHtml}</div>
+                    </div>
+                `;
+            }).join('');
+            updateProgress();
+        }
+
+        function toggleCheck(id) {
+            savedChecks[id] = !savedChecks[id];
+            localStorage.setItem('payet_overland_checks', JSON.stringify(savedChecks));
+            renderChecklist();
+        }
+
+        function resetChecklist() {
+            savedChecks = {};
+            localStorage.removeItem('payet_overland_checks');
+            renderChecklist();
+        }
+
+        function updateProgress() {
+            const total = checklistGroups.reduce((acc, g) => acc + g.items.length, 0);
+            const checkedCount = Object.values(savedChecks).filter(Boolean).length;
+            const pct = Math.round((checkedCount / total) * 100);
+            document.getElementById('progress-bar').style.width = pct + '%';
+            document.getElementById('progress-text').innerText = `${pct}% Siap (${checkedCount}/${total})`;
+        }
+
+        renderRoutes();
+        renderGallery();
+        renderChecklist();
+    </script>
+</body>
 </html>
